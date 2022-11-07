@@ -1,3 +1,5 @@
+/* Variables */
+
 :root {
 	/* Bg colors */
 
@@ -76,7 +78,8 @@ img {
 	outline: 1px solid red;
 }
 
-header {
+header,
+section {
 	background-color: #191c26;
 }
 
@@ -132,4 +135,135 @@ header {
 .primary-btn:hover,
 .primary-btn:focus {
 	background-color: var(--accent-color);
+}
+
+/* Hero */
+
+.hero-section {
+	padding-top: 152px;
+	padding-bottom: 40px;
+}
+
+.hero-container {
+	position: relative;
+	padding-left: 200px;
+}
+
+.social-list {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	display: flex;
+	align-items: center;
+	gap: 40px;
+
+	transform-origin: bottom left;
+	transform: rotate(-90deg) translateY(calc(100% + 27px)) translateX(40px);
+}
+
+.social-list::before {
+	content: "";
+
+	width: 60px;
+	height: 1px;
+
+	background-color: var(--tittle-text-color);
+}
+
+.social-item {
+}
+
+.social-link {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	letter-spacing: 0.2em;
+
+	color: var(--tittle-text-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+	color: var(--accent-color);
+}
+
+.upper-title {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	margin-top: 0;
+	margin-bottom: 20px;
+
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+
+	text-transform: uppercase;
+
+	color: rgba(157, 164, 189, 0.6);
+}
+
+.upper-title::before {
+	content: "";
+
+	width: 60px;
+	height: 1px;
+
+	background: rgba(157, 164, 189, 0.6);
+}
+
+.hero-title {
+	margin-top: 0;
+	margin-bottom: 20px;
+
+	font-family: "Raleway", sans-serif;
+	font-size: 72px;
+	line-height: 1.18;
+	letter-spacing: 0.05em;
+
+	color: var(--secondary-text-color);
+}
+
+.under-title {
+	margin-top: 0;
+	margin-bottom: 144px;
+
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+
+	color: var(--additional-text-color);
+}
+
+.slider-btns {
+	display: block;
+	text-align: right;
+}
+
+.slider-btn {
+	width: 60px;
+	height: 24px;
+	padding: 0 0 8px 0;
+
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	letter-spacing: 0.1em;
+
+	color: var(--secondary-text-color);
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid var(--primary-bg-color);
+
+	cursor: pointer;
+}
+
+.left {
+	margin-right: 24px;
+	text-align-last: left;
+}
+
+.right {
+	text-align-last: right;
 }
