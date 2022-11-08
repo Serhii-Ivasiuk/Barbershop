@@ -79,7 +79,7 @@ img {
 }
 
 header,
-section {
+.hero-section {
 	background-color: #191c26;
 }
 
@@ -111,7 +111,7 @@ section {
 
 	font-weight: 600;
 	font-size: 12px;
-	line-height: 16px;
+	line-height: calc(16 / 12);
 	letter-spacing: 0.1em;
 
 	color: var(--secondary-text-color);
@@ -132,8 +132,9 @@ section {
 	color: var(--secondary-text-color);
 }
 
-.primary-btn:hover,
-.primary-btn:focus {
+.btn:hover,
+.btn:focus {
+	color: var(--secondary-text-color);
 	background-color: var(--accent-color);
 }
 
@@ -177,7 +178,7 @@ section {
 .social-link {
 	font-weight: 600;
 	font-size: 11px;
-	line-height: 1.36;
+	line-height: calc(15 / 11);
 	letter-spacing: 0.2em;
 
 	color: var(--tittle-text-color);
@@ -197,10 +198,13 @@ section {
 
 	font-weight: 600;
 	font-size: 11px;
-	line-height: 1.36;
+	line-height: calc(15 / 11);
 
 	text-transform: uppercase;
+	color: var(--tittle-text-color);
+}
 
+.hero-upper-tittle {
 	color: rgba(157, 164, 189, 0.6);
 }
 
@@ -210,7 +214,11 @@ section {
 	width: 60px;
 	height: 1px;
 
-	background: rgba(157, 164, 189, 0.6);
+	background-color: var(--tittle-text-color);
+}
+
+.hero-upper-tittle::before {
+	background-color: rgba(157, 164, 189, 0.6);
 }
 
 .hero-title {
@@ -219,7 +227,7 @@ section {
 
 	font-family: "Raleway", sans-serif;
 	font-size: 72px;
-	line-height: 1.18;
+	line-height: calc(85 / 72);
 	letter-spacing: 0.05em;
 
 	color: var(--secondary-text-color);
@@ -227,11 +235,15 @@ section {
 
 .under-title {
 	margin-top: 0;
-	margin-bottom: 144px;
+	margin-bottom: 0;
 
 	font-size: 18px;
-	line-height: 1.67;
+	line-height: calc(30 / 18);
 	letter-spacing: 0.02em;
+}
+
+.hero-under-title {
+	margin-bottom: 144px;
 
 	color: var(--additional-text-color);
 }
@@ -248,7 +260,7 @@ section {
 
 	font-weight: 600;
 	font-size: 11px;
-	line-height: 1.36;
+	line-height: calc(15 / 11);
 	letter-spacing: 0.1em;
 
 	color: var(--secondary-text-color);
@@ -266,4 +278,55 @@ section {
 
 .right {
 	text-align-last: right;
+}
+
+/* About section */
+
+.section {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.about {
+	display: flex;
+	gap: 30px;
+}
+
+.about-list {
+	display: flex;
+	gap: 30px;
+}
+
+.about-wrap {
+	width: 470px;
+}
+
+.section-title {
+	margin-top: 0;
+	margin-bottom: 20px;
+
+	font-family: "Raleway";
+	font-size: 42px;
+	line-height: calc(49 / 42);
+	letter-spacing: 0.05em;
+
+	color: var(--tittle-text-color);
+}
+
+.about-under-title {
+	margin-bottom: 20px;
+}
+
+.about-text {
+	margin-top: 0;
+	margin-bottom: 42px;
+
+	font-size: 14px;
+	line-height: calc(26 / 14);
+
+	letter-spacing: 0.02em;
+}
+
+.secondary-btn {
+	color: var(--tittle-text-color);
 }
